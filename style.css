@@ -1,0 +1,64 @@
+body{
+    margin:0;
+    font-family:'Trebuchet MS';
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: url(images/pigAndCow.jpg);
+    background-size:auto;
+    overflow: hidden;
+}
+
+
+h2{
+    height: 50px;
+    width: 400px;
+    text-transform: lowercase;
+    letter-spacing: 4px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+.clock{
+    display: flex;
+}
+
+.clock div{
+    margin: 5px;
+}
+
+.clock span{
+    width: 100px;
+    height: 80px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    opacity: 0.8;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.clock .text{
+    height: 30px;
+    font-size: 15px;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    background-color: thistle;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.clock #ampm{
+    border-radius: 15px;
+   
+}
