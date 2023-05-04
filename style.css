@@ -8,7 +8,7 @@ body{
     justify-content: center;
     background: url(images/pigAndCow.jpg);
     background-size:auto;
-    overflow: hidden;
+    overflow: hidden;  
 }
 
 
@@ -42,7 +42,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    background-color:ghostwhite;
     opacity: 0.8;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -53,7 +53,7 @@ h2{
     font-size: 15px;
     text-transform: lowercase;
     letter-spacing: 2px;
-    background-color: thistle;
+    background-color:mistyrose;
     border-radius: 15px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -61,4 +61,46 @@ h2{
 .clock #ampm{
     border-radius: 15px;
    
+}
+
+.movingPig{
+    display: flex;
+}
+
+.btn{
+    background-color:  rgba(206, 208, 214, 0.85);
+    padding: 20px 40px ;
+    border-radius: 10px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn:hover{
+    color: rgb(206, 208, 214);
+}
+
+.btn::before{
+    content: "";
+    position:absolute;
+    background-color:rgb(65, 66, 69);
+    width: 0px;
+    height : 0px;
+    border-radius: 50%;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%,-50%);
+    transition: width 0.45s,height 0.45s;
+}
+
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
 }
