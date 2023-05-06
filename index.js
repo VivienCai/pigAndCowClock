@@ -3,7 +3,8 @@ const minuteEl = document.getElementById("minute");
 const secondEl = document.getElementById("second");
 const ampmEl = document.getElementById("ampm");
 const btnEl = document.querySelector(".btn");
-
+const btnTextEl = document.getElementById("btnText");
+const pigEl = document.getElementById("pigImg");
 
 function updateClock(){
     let h = new Date().getHours();
@@ -21,6 +22,9 @@ function updateClock(){
     secondEl.innerText = s;
     ampmEl.innerText = ampm;
     setTimeout(()=>{
+        console.log(btnTextEl.style.zIndex);
+        // console.log(btnEl.before.style.zIndex);
+        
         updateClock()
     }, 1000)
 }
@@ -34,4 +38,17 @@ btnEl.addEventListener("mouseover", (event)=>{
     btnEl.style.setProperty("--xPos",x + "px");
     btnEl.style.setProperty("--yPos",y + "px");
 
+})
+
+btnEl.addEventListener("click", ()=>{
+    if(pigEl.classList.contains("animatePig")){
+        pigEl.classList.remove("animatePig");
+        btnTextEl.style.zIndex = 1;
+        btnTextEl.textContent = "Start Pig";
+    }
+    else{
+        pigEl.classList.add("animatePig");
+        btnTextEl.style.zIndex = 1;
+        btnTextEl.textContent = "Stop Pig"
+    }
 })
