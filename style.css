@@ -167,3 +167,19 @@ h2{
     animation-timing-function: linear; 
     animation-iteration-count: infinite;
 }
+
+p{
+    height: 40px;
+    width: 110px;
+    text-transform: lowercase;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+    opacity: 0.8;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+}

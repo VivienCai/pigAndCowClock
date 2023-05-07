@@ -25,9 +25,6 @@ function updateClock(){
     secondEl.innerText = s;
     ampmEl.innerText = ampm;
     setTimeout(()=>{
-        console.log(btnTextEl.style.zIndex);
-        // console.log(btnEl.before.style.zIndex);
-        
         updateClock()
     }, 1000)
 }
@@ -61,5 +58,5 @@ speedEl.innerHTML = sliderEl.value;
 
 sliderEl.oninput = function(){
     speedEl.innerHTML = this.value;
-   pigEl.style.animationDuration = (101-sliderEl.value)/3   + "s";
+   pigEl.style.animationDuration = (101-sliderEl.value)/3 + "s";
 }
