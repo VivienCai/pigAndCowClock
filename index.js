@@ -5,6 +5,9 @@ const ampmEl = document.getElementById("ampm");
 const btnEl = document.querySelector(".btn");
 const btnTextEl = document.getElementById("btnText");
 const pigEl = document.getElementById("pigImg");
+const sliderEl = document.getElementById("slider");
+const speedEl = document.getElementById("speed");
+const pigAnimation = document.querySelector(".animatePig");
 
 function updateClock(){
     let h = new Date().getHours();
@@ -41,14 +44,22 @@ btnEl.addEventListener("mouseover", (event)=>{
 })
 
 btnEl.addEventListener("click", ()=>{
+    btnTextEl.style.zIndex = 1;
     if(pigEl.classList.contains("animatePig")){
         pigEl.classList.remove("animatePig");
-        btnTextEl.style.zIndex = 1;
         btnTextEl.textContent = "Start Pig";
     }
     else{
         pigEl.classList.add("animatePig");
-        btnTextEl.style.zIndex = 1;
         btnTextEl.textContent = "Stop Pig"
+        pigEl.style.animationDuration = (101-sliderEl.value)/3 + "s";
     }
+
 })
+
+speedEl.innerHTML = sliderEl.value;
+
+sliderEl.oninput = function(){
+    speedEl.innerHTML = this.value;
+   pigEl.style.animationDuration = (101-sliderEl.value)/3   + "s";
+}

@@ -79,7 +79,7 @@ h2{
     overflow: hidden;
     transition: 0.5s;
 }
-
+ 
 .btn #btnText{
     position: relative;
     z-index: 1;
@@ -107,6 +107,44 @@ h2{
     height: 300px;
 }
 
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 7px;
+    background:#FFBCBC;
+    position: relative;
+    top: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition:  opacity .2s;
+      -webkit-transition: .2s;
+    
+}
+.slider:hover {
+  background:#e8a0ad;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: url("images/pig.png"); 
+    background-size: 30px;
+    border: 0;
+    cursor: pointer; 
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: url("images/pig.png"); 
+    background-size: 30px;
+    border: 0;
+    cursor: pointer; 
+  }
+
 @keyframes runningPig{
     25%{
         transform: translateX(calc(100vh - 150px));
@@ -119,6 +157,8 @@ h2{
 #pigImg{
     width: 50%;
     height: auto;
+    position: relative;
+    top: 10px;
 }
 
 .animatePig{
